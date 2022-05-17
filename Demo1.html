@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>123</div>
+    <script>
+        // let name = prompt('请输入你的名字：')
+        // alert(name + ',' + prompt('请输入你的年龄：') + '岁生日快乐')
+        //alert(prompt('请输入你的名字') + ',今天是' + prompt('请输入今天的天气') + ',祝你心情愉快')
+
+        // var age = prompt('请输入您的年龄');
+        // 1. parseInt(变量)  可以把 字符型的转换为数字型 得到是整数
+        // console.log(parseInt(age));
+        // console.log(parseInt('3.14')); // 3 取整
+        // console.log(parseInt('3.94')); // 3 取整，直接抛弃小数位
+        // console.log(parseInt('120px')); // 120 会去掉这个px单位
+        // console.log(parseInt('rem120px')); // NaN
+
+        // // 2. parseFloat(变量) 可以把 字符型的转换为数字型 得到是小数 浮点数
+        // console.log(parseFloat('3.14')); // 3.14
+        // console.log(parseFloat('120px')); // 120 会去掉这个px单位
+        // console.log(parseFloat('rem120px')); // NaN
+
+        // // 3. 利用 Number(变量) 
+        // var str = '123';
+        // console.log(Number(str));
+        // console.log(Number('12'));
+
+        // // 4. 利用了算数运算 - * /  隐式转换
+        // console.log('12' - 0); // 12
+        // console.log('123' - '120');
+        // console.log('123' * 1);
+
+        //转换为布尔型:Boolean()函数 
+        //只有这5种为false，其他都为true
+        // console.log(Boolean(''));
+        // console.log(Boolean(0));
+        // console.log(Boolean(NaN));
+        // console.log(Boolean(null));
+        // console.log(Boolean(undefined));
+
+        //函数中的arguments的使用
+        // function getMax() {
+        //     var max = arguments[0]
+        //     for (var i = 1; i < arguments.length; i++) {
+        //         if (arguments[i] > max) {
+        //             max = arguments[i]
+        //         }
+        //     }
+        //     return max
+        // }
+        // console.log(getMax(11, 2, 34, 444, 5, 100));
+
+        //作用域链
+        // function f1() {
+        //     var num = 123;
+        //     function f2() {
+        //         console.log(num);
+        //     }
+        //     f2();
+        // }
+        // var num = 456;
+        // f1();
+
+        // 查找字符串"abcoefoxyozzopp"中所有o出现的位置以及次数
+        // 核心算法：先查找第一个o出现的位置
+        var str = "oabcoefoxyozzopp";
+
+        var index = 0;
+        var num = 0;
+        while (true) {
+            index = str.indexOf('o', index);
+            if (index === -1) {
+                break;
+            }
+            console.log(index);
+            index++;
+            num++;
+        }
+        console.log('o出现的次数是: ' + num);
+  // 课后作业 ['red', 'blue', 'red', 'green', 'pink','red'], 求 red 出现的位置和次数
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: #58a;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ad"></div>
+    <script>
+        // const arr = ['red', 'green', 'blue']
+        // let [r, g, b] = arr
+        // console.log([r, g, b]);
+
+        // const obj = {
+        //     uname: 'rick',
+        //     age: 30,
+        //     sayHi: function () {
+        //         console.log('hello');
+        //     },
+        //     sayBye() {
+        //         console.log('Bye~');
+        //     }
+        // }
+        // let { uname, age, sayHi } = obj;
+        // let { sayBye } = obj;
+        // console.log({ uname, age, sayHi });
+        // console.log({ sayBye });
+
+        // let name = 'Wayne'
+
+        // let fn = n => {
+        //     n++
+        //     return n
+        // }
+        // console.log(fn(3));
+        // let fn1 = (a, b) => a + b
+        // console.log(fn1(1, 2));
+
+        // let ad = document.getElementById('ad')
+
+        // ad.addEventListener("click", function () {
+        //     setTimeout(() => {
+        //         this.style.background = 'pink'
+        //     }, 200)
+        // })
+
+        //rest
+        let fn = (a, b, ...args) => {
+            console.log(a);
+            console.log(b);
+            console.log(args);
+        }
+        fn(1, 2, 3, 4, 5)
+
+
+    </script>
+</body>
+
+</html>
