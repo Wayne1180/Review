@@ -1,0 +1,23 @@
+{
+  "name": "review",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jQuery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wayne1180/Review.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wayne1180/Review/issues"
+  },
+  "homepage": "https://github.com/Wayne1180/Review#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
