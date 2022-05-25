@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap-theme.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="page-header">Promise 初体验</h2>
+        <button class="btn btn-primary" id="btn">点击抽奖</button>
+    </div>
+
+    <script>
+        //生成随机数
+        function rand(m, n) {
+            return Math.ceil(Math.random() * (n - m + 1)) + m - 1
+        }
+
+        //获取元素对象
+        const btn = document.querySelector('#btn')
+        //绑定单机事件
+        btn.addEventListener('click', function () {
+            //定时器
+            // setTimeout(() => {
+            //     //30%
+            //     //获取从1-100的一个随机数
+            //     let n = rand(1, 100)
+            //     //判断
+            //     if (n <= 30) {
+            //         alert('一等奖')
+            //     } else {
+            //         alert('再接再厉')
+            //     }
+            // },1000)
+
+            //Promise形式实现
+            //resolve解决 函数类型的数据
+            //reject拒绝    函数类型的数据
+            const p = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    //30%
+                    //获取从1-100的一个随机数
+                    let n = rand(1, 100)
+                    //判断
+                    if (n <= 30) {
+                        resolve(n) //将promise对象的状态设为成功
+                    } else {
+                        reject(n) //将promise对象的状态设置为失败
+                    }
+                }, 1000)
+            })
+
+            //调用then方法
+            //value值
+            //reason 理由
+            p.then((value) => {
+                alert('一等奖')
+                console.log(value);
+            }, (reason) => {
+                alert('再接再厉')
+                console.log(reason);
+            })
+        })
+
+    </script>
+</body>
+
+</html>
